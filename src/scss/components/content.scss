@@ -1,0 +1,21 @@
+@import "../modules/vars.scss";
+@import "../modules/font.scss";
+@import "../modules/functions.scss";
+@import "../modules/ui.scss";
+@import "../modules/colors.scss";
+
+.content {
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 85px;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      padding-top: 95px;
+    }
+  }
+}
+
+
+

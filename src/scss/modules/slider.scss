@@ -1,0 +1,41 @@
+@import "../modules/vars.scss";
+@import "../modules/font.scss";
+@import "../modules/functions.scss";
+
+//slider
+.product-swiper,
+.productStar-swiper {
+  position: relative;
+  //z-index: $position-swiper;
+  user-select: none;
+}
+
+
+
+//arrows slider
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #5A1404;
+  font-size: 15px !important;
+  font-weight: 700;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  left: initial !important;
+  border-radius: 50%;
+  width: 47px !important;
+  height: 47px !important;
+  top: 100% !important;
+  //@media all and (min-width: $breakpoint-tablet-L) {
+  //  top: 50% !important;
+  //}
+}
+
+.swiper-button-next {
+  right: 26px !important;
+}
+
+.swiper-button-prev {
+  left: 26px !important;
+}

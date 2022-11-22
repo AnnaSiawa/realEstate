@@ -1,0 +1,63 @@
+@import "modules/vars";
+@import "modules/font";
+@import "modules/functions";
+@import "modules/reset";
+@import "modules/colors";
+@import "modules/slider";
+
+
+//@import "template/";
+
+html, body {
+  @include main-style-text;
+  background-color: $color-bg;
+}
+
+.wrapper {
+  min-height: 100%;
+  min-height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-sizing: border-box;
+  zoom: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-image: url(/img/fullmeb.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+
+body.lock {
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media all and (min-width: $breakpoint-tablet-L) {
+    padding: 0 50px;
+  }
+  @media all and (min-width: $breakpoint-desktop-L) {
+    padding: 0 100px;
+  }
+}
+
+@import "components/header";
+@import "components/content";
+@import "modules/vanilla-tabs";
+@import "modules/animation";
+
+//или подключение с помощью маски (sassGlob) всех файлов из директории
+//@import "components/*.scss";

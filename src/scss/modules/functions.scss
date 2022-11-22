@@ -1,0 +1,45 @@
+@import "../modules/vars";
+@import "../modules/font";
+@import "../modules/colors";
+
+@mixin main-style-text {
+  font-family: $primaryFont;
+  font-size: $primary-font-size-m;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: $color-text;
+  @media all and (min-width: $breakpoint-tablet-L) {
+    font-size: $primary-font-size-d;
+  }
+}
+
+@mixin desktop-menu-item {
+  font-family: $primaryFont;
+  font-size: $font-size-item-t;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 150%;
+  color: $color-item-menu;
+  @media all and (min-width: $breakpoint-desktop-L) {
+    font-size: $font-size-item-d;
+  }
+}
+
+@mixin mobile-menu-item {
+  font-family: $primaryFont;
+  font-size: $font-size-item-m;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 150%;
+  color: $color-item-menu;
+}
+
+@mixin mobile-menu-cell {
+  font-family: $primaryFont;
+  font-size: $font-size-item-m;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 150%;
+  color: $color-item-menu;
+}

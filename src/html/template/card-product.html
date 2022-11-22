@@ -1,0 +1,43 @@
+<li data-title="@@data">
+    <div class="tab">
+        <div class="tab__disc">
+            <div class="tab__block tab__block_img">
+                <img alt="" src="@@image">
+            </div>
+            <div class="tab__block tab__block_content">
+                <h1 class="tab__title">@@title</h1>
+                <p class="tab__p">@@paragraph1</p>
+                <p class="tab__p">@@paragraph2</p>
+            </div>
+        </div>
+        <div class="tab__charact">
+            <div class="tab__block_charact">
+                <h2 class="tab__subtitle">Характеристики</h2>
+                <ol class="tab__list">
+                    <li class="tab__item">@@characteristic.1</li>
+                    <li class="tab__item">@@characteristic.2</li>
+                    <li class="tab__item">@@characteristic.3</li>
+                    <li class="tab__item">@@characteristic.4</li>
+                 </ol>
+            </div>
+            <div class="tab__block">
+                <h2 class="tab__subtitle">Добавить характеристику</h2>
+                <div class="tab__add-charact">
+                    <label for="@@id-area"></label>
+                    <textarea class="textarea" id="@@id-area" name="charact" placeholder="Алюминиевый сплав"></textarea>
+                    <div class="btn tab__add-btn" id="btn-textarea">
+                        <button type="button">Добавить</button>
+                    </div>
+                </div>
+                <div class="tab__confirm">
+                    <div class="btn tab__confirm-btn disabled" id="btn-ok">
+                        <button type="button">Окей</button>
+                    </div>
+                    <div class="btn tab__confirm-btn disabled" id="btn-cancel">
+                        <button type="button">Отмена</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>

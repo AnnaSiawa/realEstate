@@ -1,0 +1,63 @@
+@import "../modules/vars";
+@import "../modules/font";
+@import "../modules/functions";
+@import "../modules/colors";
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn {
+  width: 100%;
+  background-color: $color-btn;
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s ease;
+
+  &:hover {
+    background-color: $color-btn-hover;
+  }
+
+  &:active {
+    background-color: $color-btn-active;
+  }
+
+  button {
+    padding: 18px 0;
+    background-color: initial;
+    color: $color-white;
+  }
+}
+
+.textarea {
+  height: 52px;
+  width: 100%;
+  max-width: 351px;
+  padding: 15.5px 16px;
+  margin-bottom: 15px;
+  //border: 1px solid $color-bg-tab;
+  border-radius: 16px;
+  //color: $color-font-tab-title;
+  resize: none;
+  outline: none;
+  @media all and (min-width: $breakpoint-tablet-L) {
+    margin-bottom: 0;
+    margin-right: 24px;
+  }
+
+  &::-webkit-input-placeholder,
+  &:-moz-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder,
+  &::placeholder {
+    //color: $color-bg-tab;
+  }
+
+  &:focus {
+    //border: 1px solid $color-link-tab;
+  }
+
+}

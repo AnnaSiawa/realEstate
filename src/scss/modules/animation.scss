@@ -1,0 +1,13 @@
+@keyframes animate-header {
+  0% {
+    opacity: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+  }
+}
