@@ -1,5 +1,7 @@
 $color-white: #fff;
-$color-green: #10a63d;
+$color-green: #095e23;
+$color-green-dark: #053E17FF;
+$color-green-super-dark: #01240d;
 $color-lilac: #8C93D1;
 
 $color-text: $color-white;
@@ -14,8 +16,8 @@ $color-link-hover: $color-green;
 $color-link-active: $color-green;
 
 $color-btn: $color-green;
-$color-btn-disable: $color-green;
-$color-btn-hover: $color-green;
-$color-btn-active: $color-green;
+//$color-btn-disable: $color-green;
+$color-btn-hover: $color-green-dark;
+$color-btn-active: $color-green-super-dark;
 
 

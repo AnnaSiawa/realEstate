@@ -8,6 +8,7 @@
   @include main-style-text;
   position: fixed;
   width: 100%;
+  z-index: 2;
 
   &_middle {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
@@ -192,6 +193,7 @@
     width: 100%;
   }
 }
+
 .menu-logo-m {
   display: block;
   position: relative;

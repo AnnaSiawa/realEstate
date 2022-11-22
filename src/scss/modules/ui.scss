@@ -10,12 +10,14 @@ a {
 
 .btn {
   width: 100%;
+  max-width: 230px;
   background-color: $color-btn;
   border-radius: 16px;
   text-align: center;
   position: relative;
   cursor: pointer;
   transition: 0.5s ease;
+  z-index: 1;
 
   &:hover {
     background-color: $color-btn-hover;
@@ -29,6 +31,7 @@ a {
     padding: 18px 0;
     background-color: initial;
     color: $color-white;
+    z-index: 1;
   }
 }
 
@@ -60,4 +63,34 @@ a {
     //border: 1px solid $color-link-tab;
   }
 
+}
+
+h1 {
+  width: 100%;
+  margin: 180px 0 25px;
+  font-size: $font-size-h1-m;
+  font-weight: bold;
+  line-height: 120%;
+  @media all and (min-width: $breakpoint-tablet-L) {
+    font-size: $font-size-h1-d;
+    max-width: 515px;
+  }
+  @media all and (min-width: $breakpoint-desktop-S) {
+    max-width: 700px;
+  }
+}
+
+h3 {
+  width: 100%;
+  margin: 0 0 30px;
+  font-size: $font-size-h3-m;
+  font-weight: 500;
+  line-height: 150%;
+  @media all and (min-width: $breakpoint-tablet-L) {
+    font-size: $font-size-h3-d;
+    max-width: 515px;
+  }
+  @media all and (min-width: $breakpoint-desktop-S) {
+    max-width: 700px;
+  }
 }

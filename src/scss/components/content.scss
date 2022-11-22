@@ -5,7 +5,7 @@
 @import "../modules/colors.scss";
 
 .content {
-
+  z-index: 1;
   &__inner {
     display: flex;
     align-items: center;
@@ -13,6 +13,14 @@
     padding-top: 85px;
     @media all and (min-width: $breakpoint-tablet-L) {
       padding-top: 95px;
+    }
+    @media all and (min-width: $breakpoint-desktop-S) {
+      padding-top: 175px;
+      justify-content: center;
+    }
+    @media all and (min-width: $breakpoint-desktop-L) {
+      padding-top: 230px;
+      justify-content: center;
     }
   }
 }
