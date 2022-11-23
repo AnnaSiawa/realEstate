@@ -1,0 +1,49 @@
+@import "../modules/vars";
+@import "../modules/font";
+@import "../modules/functions";
+@import "../modules/ui";
+@import "../modules/colors";
+
+.services {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: $color-green-super-dark;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__container {
+    max-width: 378px;
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    @media all and (min-width: $breakpoint-desktop-S) {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__title {
+    @include desktop-menu-item;
+    text-align: center;
+    text-transform: uppercase;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      text-align: left;
+    }
+  }
+
+  &__disc {
+    @include main-style-text;
+    text-align: center;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      text-align: left;
+    }
+  }
+}

@@ -1,29 +1,45 @@
-@import "../modules/vars.scss";
-@import "../modules/font.scss";
-@import "../modules/functions.scss";
-@import "../modules/ui.scss";
-@import "../modules/colors.scss";
+@import "../modules/vars";
+@import "../modules/font";
+@import "../modules/functions";
+@import "../modules/ui";
+@import "../modules/colors";
 
 .content {
   z-index: 1;
+
+  &__top {
+    margin-bottom: 80px;
+    &_services {
+      background-color: $color-bg;
+    }
+  }
+
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 85px;
-    @media all and (min-width: $breakpoint-tablet-L) {
-      padding-top: 95px;
-    }
     @media all and (min-width: $breakpoint-desktop-S) {
-      padding-top: 175px;
       justify-content: center;
     }
     @media all and (min-width: $breakpoint-desktop-L) {
-      padding-top: 230px;
       justify-content: center;
+    }
+
+    &_about {
+      padding-top: 85px;
+      @media all and (min-width: $breakpoint-tablet-L) {
+        padding-top: 95px;
+      }
+      @media all and (min-width: $breakpoint-desktop-S) {
+        padding-top: 175px;
+      }
+      @media all and (min-width: $breakpoint-desktop-L) {
+        padding-top: 230px;
+      }
+    }
+
+    &_services {
+      padding: 50px 0;
     }
   }
 }
-
-
-

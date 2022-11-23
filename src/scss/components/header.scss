@@ -6,6 +6,7 @@
 
 .header {
   @include main-style-text;
+  color: $color-text;
   position: fixed;
   width: 100%;
   z-index: 2;
@@ -29,12 +30,18 @@
 .desktop-menu {
   display: none;
 
-  a {
+  &__link {
     @include desktop-menu-item;
     transition: 0.8s ease;
 
     &:hover {
       color: $color-item-menu-hover;
+    }
+  }
+
+  &__link._scroll {
+    &:hover {
+      color: $color-green-super-dark;
     }
   }
 
@@ -83,7 +90,7 @@
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+  background: linear-gradient(rgba(0, 0, 0, 0.98), rgba(0, 0, 0, 0.98));
   left: -3000px;
   padding: 20px 15px;
   transition: 0.3s ease;

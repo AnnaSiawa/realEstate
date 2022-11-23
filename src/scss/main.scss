@@ -5,12 +5,12 @@
 @import "modules/colors";
 @import "modules/slider";
 
-
 //@import "template/";
 
 html, body {
   @include main-style-text;
   background-color: $color-bg;
+  color: $color-text;
 }
 
 .wrapper {
@@ -54,8 +54,11 @@ body.lock {
   }
 }
 
-@import "components/header";
 @import "components/content";
+@import "components/header";
+@import "components/about";
+@import "components/services";
+
 @import "modules/vanilla-tabs";
 @import "modules/animation";
 
