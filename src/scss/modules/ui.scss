@@ -80,16 +80,28 @@ h1, h2 {
 h1 {
   font-size: $font-size-h1-m;
   margin: 180px 0 25px;
+  text-transform: lowercase;
+
   @media all and (min-width: $breakpoint-tablet-L) {
     font-size: $font-size-h1-d;
+  }
+
+  &:first-letter {
+    text-transform: uppercase;
   }
 }
 
 h2 {
   font-size: $font-size-h2-m;
   margin: 0 0 50px 0;
+  text-transform: lowercase;
+
   @media all and (min-width: $breakpoint-tablet-L) {
     font-size: $font-size-h2-d;
+  }
+
+  &:first-letter {
+    text-transform: uppercase;
   }
 }
 

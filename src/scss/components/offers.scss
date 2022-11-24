@@ -35,7 +35,9 @@
   }
 
   &__title {
-    text-transform: lowercase;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 2px 1px 3px #000;
   }
 
   &__img {
