@@ -1,0 +1,76 @@
+@import "../modules/vars";
+@import "../modules/font";
+@import "../modules/functions";
+@import "../modules/ui";
+@import "../modules/colors";
+
+.offers {
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      display: block;
+      column-count: 3;
+    }
+  }
+
+  &__card {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      .offers__outgoing {
+        opacity: 1;
+        transform: translate(0px, 0px) rotate(0deg);
+      }
+    }
+  }
+
+  &__title {
+    text-transform: lowercase;
+  }
+
+  &__img {
+    position: relative;
+    padding: 0 0 50%;
+
+    img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 10px;
+    }
+  }
+
+  &__outgoing {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: translate(-250px, 0px) rotate(0deg);
+    transition: all 0.4s ease-in-out;
+  }
+}

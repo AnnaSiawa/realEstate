@@ -32,6 +32,7 @@
 
   &__link {
     @include desktop-menu-item;
+    text-transform: uppercase;
     transition: 0.8s ease;
 
     &:hover {
@@ -64,7 +65,7 @@
     cursor: pointer;
 
     &:not(:last-child) {
-      margin-right: 15px;
+      margin-right: 30px;
     }
   }
 }

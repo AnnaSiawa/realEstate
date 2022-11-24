@@ -65,20 +65,34 @@ a {
 
 }
 
-h1 {
+h1, h2 {
   width: 100%;
-  margin: 180px 0 25px;
-  font-size: $font-size-h1-m;
   font-weight: bold;
   line-height: 120%;
   @media all and (min-width: $breakpoint-tablet-L) {
-    font-size: $font-size-h1-d;
     max-width: 515px;
   }
   @media all and (min-width: $breakpoint-desktop-S) {
     max-width: 700px;
   }
 }
+
+h1 {
+  font-size: $font-size-h1-m;
+  margin: 180px 0 25px;
+  @media all and (min-width: $breakpoint-tablet-L) {
+    font-size: $font-size-h1-d;
+  }
+}
+
+h2 {
+  font-size: $font-size-h2-m;
+  margin: 0 0 50px 0;
+  @media all and (min-width: $breakpoint-tablet-L) {
+    font-size: $font-size-h2-d;
+  }
+}
+
 
 h3 {
   width: 100%;

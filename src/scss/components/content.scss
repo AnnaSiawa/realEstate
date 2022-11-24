@@ -8,23 +8,21 @@
   z-index: 1;
 
   &__top {
-    margin-bottom: 80px;
+
+    &_about {
+      margin-bottom: 80px;
+    }
+
     &_services {
       background-color: $color-bg;
+    }
+
+    &_offers {
+      background-color: $color-bg-block;
     }
   }
 
   &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    @media all and (min-width: $breakpoint-desktop-S) {
-      justify-content: center;
-    }
-    @media all and (min-width: $breakpoint-desktop-L) {
-      justify-content: center;
-    }
-
     &_about {
       padding-top: 85px;
       @media all and (min-width: $breakpoint-tablet-L) {
@@ -39,6 +37,10 @@
     }
 
     &_services {
+      padding: 50px 0;
+    }
+
+    &_offers {
       padding: 50px 0;
     }
   }
