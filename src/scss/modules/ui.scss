@@ -6,6 +6,12 @@
 a {
   text-decoration: none;
   cursor: pointer;
+  color: $color-text;
+  transition: 1s;
+
+  &:hover {
+    color: $color-link-hover;
+  }
 }
 
 .btn {
@@ -65,25 +71,20 @@ a {
 
 }
 
-h1, h2 {
+h1 {
+  margin: 180px 0 25px;
   width: 100%;
   font-weight: bold;
   line-height: 120%;
-  @media all and (min-width: $breakpoint-tablet-L) {
-    max-width: 515px;
-  }
-  @media all and (min-width: $breakpoint-desktop-S) {
-    max-width: 700px;
-  }
-}
-
-h1 {
   font-size: $font-size-h1-m;
-  margin: 180px 0 25px;
   text-transform: lowercase;
 
   @media all and (min-width: $breakpoint-tablet-L) {
+    max-width: 515px;
     font-size: $font-size-h1-d;
+  }
+  @media all and (min-width: $breakpoint-desktop-S) {
+    max-width: 700px;
   }
 
   &:first-letter {
@@ -92,6 +93,9 @@ h1 {
 }
 
 h2 {
+  width: 100%;
+  font-weight: bold;
+  line-height: 120%;
   font-size: $font-size-h2-m;
   margin: 0 0 50px 0;
   text-transform: lowercase;

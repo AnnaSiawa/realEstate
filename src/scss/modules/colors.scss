@@ -1,5 +1,6 @@
 $color-white: #fff;
 $color-green: #095e23;
+$color-green-light: #6bed9e;
 $color-green-dark: #053E17FF;
 $color-green-super-dark: #01240d;
 $color-blue-dark: #0829a5;
@@ -15,7 +16,7 @@ $color-bg-block: $color-gray-dark;
 
 $color-link: $color-green;
 $color-link-disable: $color-green;
-$color-link-hover: $color-green;
+$color-link-hover: $color-green-light;
 $color-link-active: $color-green;
 
 $color-btn: $color-green;

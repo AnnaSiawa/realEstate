@@ -1,14 +1,7 @@
-@import "../modules/vars";
-@import "../modules/font";
-@import "../modules/functions";
-@import "../modules/ui";
-@import "../modules/colors";
-
 .content {
   z-index: 1;
 
   &__top {
-
     &_about {
       margin-bottom: 80px;
     }
@@ -17,7 +10,7 @@
       background-color: $color-bg;
     }
 
-    &_offers {
+    &_offers, &_feedback {
       background-color: $color-bg-block;
     }
   }
@@ -36,7 +29,7 @@
       }
     }
 
-    &_services, &_offers, &_stages {
+    &_services, &_offers, &_stages, &_feedback {
       padding: 50px 0;
     }
   }

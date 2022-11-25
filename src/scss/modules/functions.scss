@@ -42,3 +42,39 @@
   line-height: 150%;
   color: $color-item-menu;
 }
+
+@mixin input {
+  font-family: $primaryFont;
+  font-size: $font-size-text-m;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 150%;
+
+  @media all and (min-width: $breakpoint-tablet-L) {
+    font-size: $font-size-text-d;
+  }
+}
+
+@mixin input-name {
+  font-family: $primaryFont;
+  font-size: $font-size-h3-m;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 150%;
+
+  @media all and (min-width: $breakpoint-tablet-L) {
+    font-size: $font-size-h3-d;
+  }
+}
+
+@mixin form-title {
+  font-family: $primaryFont;
+  font-size: $font-size-item-m;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 150%;
+  color: $color-text;
+  @media all and (min-width: $breakpoint-tablet-L) {
+    font-size: $font-size-item-m;
+  }
+}

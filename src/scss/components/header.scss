@@ -1,9 +1,3 @@
-@import "../modules/vars.scss";
-@import "../modules/font.scss";
-@import "../modules/functions.scss";
-@import "../modules/ui.scss";
-@import "../modules/colors.scss";
-
 .header {
   @include main-style-text;
   color: $color-text;

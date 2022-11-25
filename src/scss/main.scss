@@ -4,6 +4,7 @@
 @import "modules/reset";
 @import "modules/colors";
 @import "modules/slider";
+@import "modules/ui";
 
 //@import "template/";
 
@@ -60,6 +61,7 @@ body.lock {
 @import "components/services";
 @import "components/offers";
 @import "components/stages";
+@import "components/feedback";
 
 @import "modules/vanilla-tabs";
 @import "modules/animation";
