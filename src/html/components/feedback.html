@@ -1,5 +1,5 @@
 <!--ограничение по высоте -->
-<div class="content">
+<div class="content data-feedback">
     <!--фон-->
     <div class="content__top content__top_feedback">
         <!--ограничение по ширине-->
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                     <div class="feedback__form">
-                        <form class="form">
+                        <form action="#" class="form" id="form">
 
                             <div class="form__title">Заявка на консультацию</div>
                             <div class="form__desc">Свяжемся и подготовим лучшие предложение!</div>
@@ -40,7 +40,7 @@
                                     autocomplete="off"
                                     name="name"
                                     id="name"
-                                    class="measure-form-name"
+                                    class="measure-form-name _req"
                                     placeholder="Ваше имя"/>
                             </div>
 
@@ -52,7 +52,7 @@
                                     autocomplete="off"
                                     name="phone"
                                     id="phone"
-                                    class="measure-form-phone"
+                                    class="measure-form-phone _req"
                                     placeholder="Ваш номер телефона"/>
                             </div>
 
@@ -66,7 +66,7 @@
 
                             <div class="checkbox">
                                 <input
-                                    class="checkbox-input"
+                                    class="checkbox-input _req"
                                     checked
                                     type="checkbox"
                                     name="agreement"
