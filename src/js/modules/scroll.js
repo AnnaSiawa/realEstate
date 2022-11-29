@@ -24,15 +24,20 @@ module.exports = () => {
 
     // прокрутка до выбранного в меню блока
     const menuItems = document.querySelectorAll('.contacts-item[data-goto]');
-
     menuItems.forEach(item => {
         item.addEventListener('click', onItemClick);
     });
 
+    // прокрутка до блока Контакты при нажатии на кнопку Связаться
+    const feedbackButtons = document.querySelectorAll('button[data-goto]');
+    feedbackButtons.forEach(button => {
+        button.addEventListener('click', onItemClick);
+    });
+
     function onItemClick(e) {
-        const menuItem = e.currentTarget;
-        if (menuItem.dataset.goto && document.querySelector(menuItem.dataset.goto)) {
-            const gotoBlock = document.querySelector(menuItem.dataset.goto);
+        const item = e.currentTarget;
+        if (item.dataset.goto && document.querySelector(item.dataset.goto)) {
+            const gotoBlock = document.querySelector(item.dataset.goto);
             let gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset;
             window.scrollTo({
                 top: gotoBlockValue - 100,

@@ -34,6 +34,7 @@ a {
   }
 
   button {
+    width: 100%;
     padding: 18px 0;
     background-color: initial;
     color: $color-white;
@@ -47,9 +48,7 @@ a {
   max-width: 351px;
   padding: 15.5px 16px;
   margin-bottom: 15px;
-  //border: 1px solid $color-bg-tab;
   border-radius: 16px;
-  //color: $color-font-tab-title;
   resize: none;
   outline: none;
   @media all and (min-width: $breakpoint-tablet-L) {

@@ -1,0 +1,32 @@
+.pop-up {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: $color-green-super-dark;
+  font-weight: bold;
+  z-index: 900;
+  background: linear-gradient(rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.58));
+
+  &__wrap {
+    padding: 50px;
+    border-radius: 10px;
+    background-color: $color-white;
+  }
+
+  &__title {
+    min-width: 200px;
+    width: 100%;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.pop-up._active {
+  display: flex;
+}

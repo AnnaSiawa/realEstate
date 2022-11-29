@@ -1,6 +1,18 @@
 module.exports = () => {
+    const popUp = document.querySelector('.pop-up');
+    const popUpInner = document.querySelector('.pop-up__inner');
+    const btnPopUp = document.querySelector('#btn-pop-up');
     const form = document.getElementById('form');
     form.addEventListener('submit', formSend);
+
+    let newTitle = document.createElement('div');
+    newTitle.className = 'pop-up__title';
+    popUpInner.prepend(newTitle);
+
+    btnPopUp.addEventListener('click', () => {
+        newTitle.innerHTML = '';
+        popUp.classList.remove('_active');
+    });
 
     async function formSend(e) {
         e.preventDefault();
@@ -15,22 +27,24 @@ module.exports = () => {
             });
             if (response.ok) {
                 let result = await response.json();
-                alert(result.message);
+                newTitle.innerHTML = result.message;
+                popUp.classList.add('_active');
                 form.reset();
                 form.classList.remove('_sending');
             } else {
-                alert('ошибка');
+                newTitle.innerHTML = 'Ошибка';
+                popUp.classList.add('_active');
                 form.classList.remove('_sending');
             }
         } else {
-            alert("запоните поля");
+            newTitle.innerHTML = 'Запоните обязательные поля';
+            popUp.classList.add('_active');
         }
     }
 
     function formValidate(form) {
         let error = 0;
         let formReq = document.querySelectorAll('._req');
-        console.log(formReq);
 
         for (let i = 0; i < formReq.length; i++) {
             const input = formReq[i];
@@ -50,11 +64,21 @@ module.exports = () => {
     }
 
     function formAddError(input) {
+        let reqFields = input.parentElement.querySelectorAll('.req-field');
+        reqFields.forEach(item => {
+            item.classList.add('_error');
+        })
+
         input.parentElement.classList.add('_error');
         input.classList.add('_error');
     }
 
     function formRemoveError(input) {
+        let reqFields = input.parentElement.querySelectorAll('.req-field');
+        reqFields.forEach(item => {
+            item.classList.remove('_error');
+        })
+
         input.parentElement.classList.remove('_error');
         input.classList.remove('_error');
     }
