@@ -1,9 +1,12 @@
 module.exports = () => {
-
-    //анимация header при сколе страницы
     const headerScroll = document.querySelector('.header_middle');
     const menuLink = headerScroll.querySelectorAll('.desktop-menu__link');
 
+    const iconMenu = document.querySelector('.menu__icon');
+    const bodyMenu = document.querySelector('.mobile-menu');
+    const menuCell = document.querySelector('.mobile-menu-cell');
+
+    //анимация header при сколе страницы
     window.onscroll = function () {
         scrollPage();
     }
@@ -22,9 +25,15 @@ module.exports = () => {
         }
     }
 
-    // прокрутка до выбранного в меню блока
+    // прокрутка до выбранного в десктопном меню блока
     const menuItems = document.querySelectorAll('.contacts-item[data-goto]');
     menuItems.forEach(item => {
+        item.addEventListener('click', onItemClick);
+    });
+
+    //прокрутка до выбранного в мобильном меню блока
+    const mobileMenuItems = document.querySelectorAll('.mobile-menu__link[data-goto]');
+    mobileMenuItems.forEach(item => {
         item.addEventListener('click', onItemClick);
     });
 
@@ -34,9 +43,50 @@ module.exports = () => {
         button.addEventListener('click', onItemClick);
     });
 
+    //клик по меню-бургер
+    if (iconMenu) {
+        iconMenu.addEventListener('click', e => {
+            e.stopPropagation();
+            toggleMenu();
+        });
+        document.addEventListener('click', e => {
+            let target = e.target;
+            let itsMenu = target === bodyMenu || bodyMenu.contains(target);
+            let itsIconMenu = target === iconMenu;
+            let menuIsActive = bodyMenu.classList.contains('active');
+            if (!itsMenu && !itsIconMenu && menuIsActive) {
+                bodyMenu.classList.toggle('active');
+                iconMenu.classList.toggle('active');
+            }
+        });
+    }
+
+    function toggleMenu() {
+        document.body.classList.toggle('lock');
+        document.getElementsByTagName('html')[0].classList.toggle('lock');
+        iconMenu.classList.toggle('active');
+        bodyMenu.classList.toggle('active');
+        menuCell.classList.toggle('active');
+    }
+
     function onItemClick(e) {
         const item = e.currentTarget;
-        if (item.dataset.goto && document.querySelector(item.dataset.goto)) {
+
+        if (bodyMenu.classList.contains('active') && item.dataset.goto && document.querySelector(item.dataset.goto)) {
+            iconMenu.classList.remove('active');
+            bodyMenu.classList.remove('active');
+            menuCell.classList.remove('active');
+            document.body.classList.remove('lock');
+            document.getElementsByTagName('html')[0].classList.remove('lock');
+            const gotoBlock = document.querySelector(item.dataset.goto);
+            let gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset;
+            window.scrollTo({
+                top: gotoBlockValue - 100,
+                left: 0,
+                behavior: 'smooth'
+            });
+            e.preventDefault();
+        } else if (item.dataset.goto && document.querySelector(item.dataset.goto)) {
             const gotoBlock = document.querySelector(item.dataset.goto);
             let gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset;
             window.scrollTo({

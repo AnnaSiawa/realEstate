@@ -8,19 +8,19 @@
         "image": "./img/product2.webp"
     },
     {
-        "title": "Двухъярусная трёхкомнатная квартира",
+        "title": "квартира-студия",
         "image": "./img/product3.webp"
     },
     {
         "title": "трёхкомнатная квартира",
-        "image": "./img/product1.webp"
+        "image": "./img/product4.webp"
     },
     {
-        "title": "Двухъярусная трёхкомнатная квартира",
-        "image": "./img/product1.webp"
+        "title": "трёхкомнатная квартира",
+        "image": "./img/product5.webp"
     },
     {
-        "title": "Двухъярусная трёхкомнатная квартира",
-        "image": "./img/product1.webp"
+        "title": "двухкомнатная квартира",
+        "image": "./img/product6.webp"
     }
 ]
