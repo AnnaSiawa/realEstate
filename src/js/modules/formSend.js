@@ -37,7 +37,7 @@ module.exports = () => {
                 form.classList.remove('_sending');
             }
         } else {
-            newTitle.innerHTML = 'Запоните обязательные поля';
+            newTitle.innerHTML = 'Заполните обязательные поля';
             popUp.classList.add('_active');
         }
     }
