@@ -1,5 +1,6 @@
 module.exports = () => {
     const popUp = document.querySelector('.pop-up');
+    const popUpWrap = document.querySelector('.pop-up__wrap');
     const popUpInner = document.querySelector('.pop-up__inner');
     const btnPopUp = document.querySelector('#btn-pop-up');
     const form = document.getElementById('form');
@@ -9,10 +10,24 @@ module.exports = () => {
     newTitle.className = 'pop-up__title';
     popUpInner.prepend(newTitle);
 
-    btnPopUp.addEventListener('click', () => {
+    if (btnPopUp) {
+        btnPopUp.addEventListener('click', e => {
+            e.stopPropagation();
+            closePopUp();
+        });
+        document.addEventListener('click', e => {
+            let target = e.target;
+            let itsPopUp = target === popUpWrap || popUpWrap.contains(target);
+            let popUpIsActive = popUp.classList.contains('_active');
+            if (!itsPopUp && popUpIsActive) {
+                closePopUp();
+            }
+        });
+    }
+    function closePopUp() {
         newTitle.innerHTML = '';
         popUp.classList.remove('_active');
-    });
+    }
 
     async function formSend(e) {
         e.preventDefault();
