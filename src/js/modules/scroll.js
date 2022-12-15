@@ -25,24 +25,6 @@ module.exports = () => {
         }
     }
 
-    // прокрутка до выбранного в десктопном меню блока
-    const menuItems = document.querySelectorAll('.contacts-item[data-goto]');
-    menuItems.forEach(item => {
-        item.addEventListener('click', onItemClick);
-    });
-
-    //прокрутка до выбранного в мобильном меню блока
-    const mobileMenuItems = document.querySelectorAll('.mobile-menu__link[data-goto]');
-    mobileMenuItems.forEach(item => {
-        item.addEventListener('click', onItemClick);
-    });
-
-    // прокрутка до блока Контакты при нажатии на кнопку Связаться
-    const feedbackButtons = document.querySelectorAll('button[data-goto]');
-    feedbackButtons.forEach(button => {
-        button.addEventListener('click', onItemClick);
-    });
-
     //клик по меню-бургер
     if (iconMenu) {
         iconMenu.addEventListener('click', e => {
@@ -68,6 +50,24 @@ module.exports = () => {
         bodyMenu.classList.toggle('active');
         menuCell.classList.toggle('active');
     }
+
+    // прокрутка до выбранного в десктопном меню блока
+    const menuItems = document.querySelectorAll('.contacts-item[data-goto]');
+    menuItems.forEach(item => {
+        item.addEventListener('click', onItemClick);
+    });
+
+    //прокрутка до выбранного в мобильном меню блока
+    const mobileMenuItems = document.querySelectorAll('.mobile-menu__link[data-goto]');
+    mobileMenuItems.forEach(item => {
+        item.addEventListener('click', onItemClick);
+    });
+
+    // прокрутка до блока Контакты при нажатии на кнопку Связаться
+    const feedbackButtons = document.querySelectorAll('button[data-goto]');
+    feedbackButtons.forEach(button => {
+        button.addEventListener('click', onItemClick);
+    });
 
     function onItemClick(e) {
         const item = e.currentTarget;

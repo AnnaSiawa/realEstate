@@ -19,8 +19,18 @@ module.exports = () => {
             let target = e.target;
             let itsPopUp = target === popUpWrap || popUpWrap.contains(target);
             let popUpIsActive = popUp.classList.contains('_active');
+
+            //скрол к форме при закрытии попапа и клике вне его границ
+            let gotoFormBlock = document.querySelector('.feedback__form');
+            let gotoBlockValue = gotoFormBlock.getBoundingClientRect().top + pageYOffset;
+
             if (!itsPopUp && popUpIsActive) {
                 closePopUp();
+                window.scrollTo({
+                    top: gotoBlockValue,
+                    left: 0,
+                    behavior: 'smooth'
+                });
             }
         });
     }
