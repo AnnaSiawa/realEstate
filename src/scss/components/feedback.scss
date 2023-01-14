@@ -3,7 +3,6 @@
   grid-template-columns: 1fr;
   grid-template-areas:
     "title"
-    "desc"
     "contacts"
     "form";
 
@@ -11,9 +10,7 @@
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
     "title title"
-    "desc form"
-    "contacts form";
-    //align-items: center;
+    "contacts form"
   }
 
   h2 {
@@ -26,31 +23,18 @@
     justify-content: flex-start;
   }
 
-  &__desc {
-    grid-area: desc;
-    margin-bottom: 30px;
-    @media all and (min-width: $breakpoint-desktop-S) {
-      margin: 0;
-    }
-  }
-
   &__contacts {
     grid-area: contacts;
     flex-direction: column;
-    margin: 0 auto 30px;
-    @media all and (min-width: $breakpoint-desktop-S) {
-      margin: -160px 0 0 0;
-    }
   }
 
   &__form {
+    position: relative;
+    z-index: 1;
     grid-area: form;
     margin: 0 auto;
   }
 
-  &__phone {
-    margin-bottom: 15px;
-  }
 
   &__phone, &__email {
     a {
@@ -227,4 +211,49 @@
     transform: scale(0); //скрыть
     transition: transform 0.5s ease;
   }
+}
+
+.feedback-anim {
+  display: none;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    display: block;
+  }
+}
+
+.skyscraper {
+  position: absolute;
+  width: 100%;
+  max-width: 145px;
+  bottom: -10px;
+
+  &_one {
+    left: 0;
+  }
+
+  &_two {
+    left: 85px;
+    animation-delay: 0.30s;
+  }
+
+  &_three {
+    left: 195px;
+    animation-delay: 0.20s;
+  }
+
+  &_four {
+    left: 310px;
+    animation-name: skyscraper;
+    animation-delay: 0.15s;
+  }
+
+  &_cloud-one {
+    top: 339px;
+    left: 440px;
+  }
+
+  &_cloud-two {
+    top: -29px;
+    left: 751px;
+  }
+
 }

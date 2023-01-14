@@ -13,6 +13,28 @@
   }
 }
 
+@mixin logo-style-t {
+  font-family: $primaryFont;
+  font-size: $font-size-logo-t;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  @media all and (min-width: $breakpoint-tablet-L) {
+    font-size: $font-size-logo-t;
+  }
+}
+
+@mixin logo-style-d {
+  font-family: $primaryFont;
+  font-size: $font-size-logo-d;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  @media all and (min-width: $breakpoint-tablet-L) {
+    font-size: $font-size-logo-d;
+  }
+}
+
 @mixin desktop-menu-item {
   font-family: $primaryFont;
   font-size: $font-size-item-t;

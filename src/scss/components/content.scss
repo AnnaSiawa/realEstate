@@ -11,6 +11,7 @@
     }
 
     &_offers, &_feedback {
+      position: relative;
       background-color: $color-bg-block;
     }
   }

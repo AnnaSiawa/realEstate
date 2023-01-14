@@ -62,10 +62,13 @@ body.lock {
 @import "components/offers";
 @import "components/stages";
 @import "components/feedback";
+@import "components/footer";
 @import "components/pop-up";
 
 @import "modules/vanilla-tabs";
 @import "modules/animation";
+
+//@import '../../node_modules/animate.css/animate.css';
 
 //или подключение с помощью маски (sassGlob) всех файлов из директории
 //@import "components/*.scss";

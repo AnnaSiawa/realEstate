@@ -53,6 +53,7 @@ module.exports = () => {
             if (response.ok) {
                 let result = await response.json();
                 newTitle.innerHTML = result.message;
+                console.log('ye');
                 popUp.classList.add('_active');
                 form.reset();
                 form.classList.remove('_sending');

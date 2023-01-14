@@ -4,9 +4,16 @@
   position: fixed;
   width: 100%;
   z-index: 2;
+  user-select: none;
 
   &_middle {
+    position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 1;
   }
 
   &__inner {
@@ -19,6 +26,75 @@
 
 .header_middle._scroll {
   animation: animate-header 0.5s linear 1 forwards;
+}
+
+.header-anim {
+  display: none;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    display: block;
+  }
+}
+
+.lamp {
+  position: absolute;
+  width: 100%;
+  max-width: 439px;
+  bottom: -552px;
+  right: 0;
+}
+
+
+.click-lantern {
+  cursor: pointer;
+}
+
+.light-lantern {
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.light-lantern._active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hidden-contacts {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: 103px;
+  top: 304px;
+  padding: 10px 15px;
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
+  box-shadow: 0 10px 19px -5px rgb(222 231 142 / 60%) inset;
+  border-radius: 10px;
+  transition: 0.1s;
+
+  .feedback__phone {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    @include main-style-text;
+    text-align: center;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      font-size: $primary-font-size-m !important;
+    }
+  }
+
+  .feedback__phone a, .feedback__email a {
+    @include desktop-menu-item;
+    justify-content: center;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      font-size: $font-size-item-t !important;
+    }
+  }
+}
+
+.hidden-contacts._active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .desktop-menu {
@@ -98,10 +174,16 @@
     max-width: 205px;
 
     li {
+      text-align: center;
+
       &:not(:last-child) {
         margin-bottom: 15px;
       }
     }
+  }
+
+  .menu-logo-m {
+    margin: 0 auto;
   }
 
   a {
@@ -126,7 +208,6 @@
     align-items: center;
     justify-content: flex-start;
     padding: 0 10px 0 0;
-    //flex: 0 1 11%;
     cursor: pointer;
     z-index: 1001;
     @media all and (min-width: $breakpoint-tablet-L) {
@@ -187,29 +268,28 @@
   }
 }
 
-.menu-logo-d {
-  max-width: 120px;
+.menu-logo-title, .menu-logo-desc {
+  display: block;
   width: 100%;
+}
 
-  img {
-    width: 100%;
-  }
+.menu-logo-title {
+  margin-bottom: 5px;
+  @include logo-style-t;
+  text-transform: uppercase;
+  color: $color-green;
+}
+
+.menu-logo-desc {
+  @include logo-style-d;
+  text-transform: uppercase;
+  color: $color-green;
 }
 
 .menu-logo-m {
   display: block;
   position: relative;
-  width: 69px;
-  padding-bottom: 24px;
-
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+  width: 169px;
 }
 
 

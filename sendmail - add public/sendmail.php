@@ -14,8 +14,8 @@ $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
 
-$mail->setFrom('annashursh1992@gmail.com'); // от кого будет уходить письмо?
-$mail->addAddress('anya.shurshalova@mail.ru');     // Кому будет уходить письмо
+$mail->setFrom('test@testcloudmd.ru'); // от кого будет уходить письмо?
+$mail->addAddress('etalon76@bk.ru');     // Кому будет уходить письмо
 $mail->isHTML(true);                                  // Set email format to HTML
 $mail->Subject = 'Заявка с сайта';
 $mail->Body = '' . $name . ' ' . ' оставил(a) сообщение, номер телефона: ' . $phone . '<br>Сообщение пользователя: ' . $message;

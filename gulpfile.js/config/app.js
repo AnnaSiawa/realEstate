@@ -34,8 +34,8 @@ module.exports = {
             safari: true
         },
         path: "./",
-        appName: 'My App',
-        appShortName: 'App',
-        appDescription: 'This is my application'
+        appName: 'Недвижимость в Брянске',
+        appShortName: 'Недвижимость в Брянске',
+        appDescription: 'Недвижимость в Брянске'
     }
 }
