@@ -38,9 +38,10 @@
 .lamp {
   position: absolute;
   width: 100%;
-  max-width: 439px;
-  bottom: -552px;
-  right: 0;
+  max-width: 400px;
+  bottom: -504px;
+  //right: 0;
+  right: -118px;
 }
 
 
@@ -63,9 +64,10 @@
   opacity: 0;
   visibility: hidden;
   position: absolute;
-  right: 103px;
+  //right: 103px;
+  right: 3px;
   top: 304px;
-  padding: 10px 15px;
+  padding: 10px 2px;
   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
   box-shadow: 0 10px 19px -5px rgb(222 231 142 / 60%) inset;
   border-radius: 10px;
@@ -87,7 +89,7 @@
     @include desktop-menu-item;
     justify-content: center;
     @media all and (min-width: $breakpoint-tablet-L) {
-      font-size: $font-size-item-t !important;
+      font-size: $font-size-h3-m !important;
     }
   }
 }

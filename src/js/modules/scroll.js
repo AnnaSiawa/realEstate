@@ -97,5 +97,28 @@ module.exports = () => {
             e.preventDefault();
         }
     }
+
+    // //обсервер для небоскребов
+    // const scrollImations = (entries, observer) => {
+    //     entries.forEach((entry) => {
+    //         // анимируем, если элемент целиком попадает в отслеживаемую область
+    //         if (entry.isIntersecting && entry.intersectionRatio == 1) {
+    //             entry.target.classList.add('animate__bounceIn');
+    //         } else {
+    //             entry.target.classList.remove('animate__bounceIn');
+    //         }
+    //     });
+    // }
+    //
+    // // создаём обсервер с параметрами
+    // const options = {
+    //     threshold: 1,
+    // };
+    // const observer = new IntersectionObserver(scrollImations, options);
+    //
+    // const boxes = document.querySelectorAll('.svg-anim');
+    // boxes.forEach((box) => {
+    //     observer.observe(box);
+    // });
 }
 
