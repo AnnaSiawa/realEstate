@@ -36,7 +36,10 @@
 
   &__img {
     position: relative;
-    padding: 0 0 50%;
+    padding: 0 0 95%;
+    @media all and (min-width: $breakpoint-mobile-L) {
+      padding: 0 0 50%;
+    }
     @media all and (min-width: $breakpoint-desktop-S) {
       padding: 0 0 75%;
     }
