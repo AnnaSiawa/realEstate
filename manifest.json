@@ -1,7 +1,7 @@
 {
-  "name": "My App",
-  "short_name": "App",
-  "description": "This is my application",
+  "name": "Недвижимость в Брянске",
+  "short_name": "Недвижимость в Брянске",
+  "description": "Недвижимость в Брянске",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",
