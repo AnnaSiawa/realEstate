@@ -14,13 +14,13 @@
     justify-content: space-between;
     flex-direction: column;
     padding: 20px 0;
-    @media all and (min-width: $breakpoint-tablet-L) {
+    @media all and (min-width: $breakpoint-desktop-S) {
       flex-direction: row
     }
   }
 
   .menu-logo-m {
-    @media all and (max-width: $breakpoint-tablet-L - 1) {
+    @media all and (max-width: $breakpoint-desktop-S - 1) {
       margin-bottom: 20px;
     }
   }
@@ -36,7 +36,7 @@
   &__contacts {
     color: $color-green;
     font-weight: bold;
-    @media all and (max-width: $breakpoint-tablet-L - 1) {
+    @media all and (max-width: $breakpoint-desktop-S - 1) {
       margin-top: 20px;
     }
 
@@ -44,9 +44,16 @@
       justify-content: center;
       color: $color-green;
       font-weight: bold;
-      @media all and (min-width: $breakpoint-tablet-L) {
+      @media all and (min-width: $breakpoint-desktop-S) {
         justify-content: flex-start;
       }
+    }
+  }
+
+  .feedback__address {
+    text-align: center;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      text-align: left;
     }
   }
 
@@ -56,7 +63,7 @@
 
   &__title-part {
     text-align: center;
-    @media all and (min-width: $breakpoint-tablet-L) {
+    @media all and (min-width: $breakpoint-desktop-S) {
       text-align: left;
     }
   }
@@ -65,8 +72,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @media all and (min-width: $breakpoint-tablet-L) {
+    @media all and (min-width: $breakpoint-desktop-S) {
       justify-content: flex-start;
+      //flex-wrap: wrap;
+      //max-width: 300px;
+      //width: 100%;
     }
   }
 

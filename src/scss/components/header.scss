@@ -135,6 +135,7 @@
 
   &__item {
     cursor: pointer;
+    text-align: center;
 
     &:not(:last-child) {
       margin-right: 30px;

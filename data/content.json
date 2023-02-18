@@ -1,26 +1,32 @@
 [
     {
-        "title": "Двухъярусная трёхкомнатная квартира",
-        "image": "./img/product1.webp"
+        "title": "2-x комнатная квартира",
+        "image": "./img/product1.webp",
+        "link": "https://bryansk.domclick.ru/card/sale__flat__1681261988"
     },
     {
-        "title": "трёхкомнатная квартира",
-        "image": "./img/product2.webp"
+        "title": "Дом с удобствами",
+        "image": "./img/product2.webp",
+        "link": "https://bryansk.domclick.ru/card/sale__house__1667376201"
     },
     {
-        "title": "квартира-студия",
-        "image": "./img/product3.webp"
+        "title": "3-х комнатная квартиа",
+        "image": "./img/product3.webp",
+        "link": "https://bryansk.domclick.ru/card/sale__flat__1688105700"
     },
     {
-        "title": "трёхкомнатная квартира",
-        "image": "./img/product4.webp"
+        "title": "Земельный участок",
+        "image": "./img/product4.webp",
+        "link": "https://bryansk.domclick.ru/card/sale__lot__1521214682"
     },
     {
-        "title": "трёхкомнатная квартира",
-        "image": "./img/product5.webp"
+        "title": "Помещение свободного назначения <br> 821,1 м.кв.",
+        "image": "./img/product5.webp",
+        "link": "https://bryansk.domclick.ru/card/sale__free_purpose__1514785329"
     },
     {
-        "title": "двухкомнатная квартира",
-        "image": "./img/product6.webp"
+        "title": "Дом с участком 10 соток",
+        "image": "./img/product6.webp",
+        "link": "https://bryansk.domclick.ru/card/sale__house__343101687"
     }
 ]
