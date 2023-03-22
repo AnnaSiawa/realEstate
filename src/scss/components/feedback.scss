@@ -47,6 +47,18 @@
       width: 25px;
     }
   }
+
+
+  &__city {
+    position: absolute;
+    bottom: 0;
+    display: none;
+    pointer-events: none;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      display: block;
+      pointer-events: visible;
+    }
+  }
 }
 
 .form._sending {
@@ -226,34 +238,14 @@
   max-width: 145px;
   bottom: -10px;
 
-
-  &_one {
-    left: 0;
-  }
-
-  &_two {
-    left: 85px;
-    animation-delay: 0.30s;
-  }
-
-  &_three {
-    left: 195px;
-    animation-delay: 0.20s;
-  }
-
-  &_four {
-    left: 310px;
-    animation-delay: 0.15s;
-  }
-
   &_cloud-one {
-    top: 339px;
+    top: -90px;
     left: 440px;
   }
 
   &_cloud-two {
-    top: -29px;
-    left: 751px;
+    top: 176px;
+    left: -288px;
   }
 
 }

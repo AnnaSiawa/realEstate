@@ -283,10 +283,22 @@
   color: $color-green;
 }
 
+.footer {
+  .menu-logo-title {
+    color: $color-white;
+  }
+}
+
 .menu-logo-desc {
   @include logo-style-d;
   text-transform: uppercase;
   color: $color-green;
+}
+
+.footer {
+  .menu-logo-desc {
+    color: $color-white;
+  }
 }
 
 .menu-logo-m {

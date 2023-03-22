@@ -28,16 +28,20 @@
     @include desktop-menu-item;
     text-align: center;
     text-transform: uppercase;
-    @media all and (min-width: $breakpoint-desktop-S) {
-      text-align: left;
-    }
+    //@media all and (min-width: $breakpoint-desktop-S) {
+    //  text-align: left;
+    //}
   }
 
   &__disc {
     @include main-style-text;
     text-align: center;
-    @media all and (min-width: $breakpoint-desktop-S) {
-      text-align: left;
+    //text-align: left;
+    display: none;
+    pointer-events: none;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      display: block;
+      pointer-events: visible;
     }
   }
 }

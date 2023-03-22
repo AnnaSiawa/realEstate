@@ -14,7 +14,7 @@ $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
 
-$mail->setFrom('test@testcloudmd.ru'); // от кого будет уходить письмо?
+$mail->setFrom('agentstvo-etalon32@agentstvo-etalon32.ru'); // от кого будет уходить письмо?
 $mail->addAddress('etalon76@bk.ru');     // Кому будет уходить письмо
 $mail->isHTML(true);                                  // Set email format to HTML
 $mail->Subject = 'Заявка с сайта';
