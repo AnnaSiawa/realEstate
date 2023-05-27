@@ -47,6 +47,18 @@
   &__list {
     padding: 0;
 
+    &_sale {
+      @media all and (min-width: $breakpoint-desktop-S) {
+        margin-top: 50px;
+      }
+    }
+
+    &_rent {
+      @media all and (min-width: $breakpoint-desktop-S) {
+        margin-top: 60px;
+      }
+    }
+
     li {
       &::before {
         content: '';

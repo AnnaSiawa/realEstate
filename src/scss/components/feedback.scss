@@ -7,10 +7,10 @@
     "form";
 
   @media all and (min-width: $breakpoint-desktop-S) {
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas:
-    "title title"
-    "contacts form"
+    //grid-template-columns: 1fr 2fr;
+    //grid-template-areas:
+    //"title title"
+    //"contacts form"
   }
 
   h2 {
@@ -26,6 +26,11 @@
   &__contacts {
     grid-area: contacts;
     flex-direction: column;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      position: absolute;
+      top: 140px;
+    }
+
   }
 
   &__form {
@@ -33,6 +38,9 @@
     z-index: 1;
     grid-area: form;
     margin: 0 auto;
+    //@media all and (min-width: $breakpoint-desktop-S) {
+    // margin: 0;
+    //}
   }
 
 
@@ -228,7 +236,7 @@
 .feedback-anim {
   display: none;
   @media all and (min-width: $breakpoint-desktop-S) {
-    display: block;
+    display: none;
   }
 }
 

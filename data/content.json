@@ -10,23 +10,38 @@
         "link": "https://bryansk.domclick.ru/card/sale__house__1667376201"
     },
     {
-        "title": "3-х комнатная квартиа",
-        "image": "./img/product3.webp",
-        "link": "https://bryansk.domclick.ru/card/sale__flat__1688105700"
-    },
-    {
-        "title": "Земельный участок",
-        "image": "./img/product4.webp",
-        "link": "https://bryansk.domclick.ru/card/sale__lot__1521214682"
-    },
-    {
         "title": "Помещение свободного назначения <br> 821,1 м.кв.",
         "image": "./img/product5.webp",
         "link": "https://bryansk.domclick.ru/card/sale__free_purpose__1514785329"
     },
     {
+        "title": "2-Х КОМНАТНАЯ КВАРТИРА УЛУЧШЕННОЙ ПЛАНИРОВКИ",
+        "image": "./img/product3.webp",
+        "link": "https://bryansk.domclick.ru/card/sale__flat__1692019571"
+    },
+    {
+        "title": "Комната в общежитии блочного типа",
+        "image": "./img/product4.webp",
+        "link": "https://bryansk.domclick.ru/card/sale__room__1700088366"
+    },
+    {
+        "title": "УНИКАЛЬНАЯ КВАРТИРА 34,8 кв.м",
+        "image": "./img/product7.webp",
+        "link": "https://bryansk.domclick.ru/card/sale__flat__1601766430"
+    },
+    {
+        "title": "ВИДОВАЯ ЕВРОДВУШКА 52,5 М.КВ",
+        "image": "./img/product8.webp",
+        "link": "https://bryansk.domclick.ru/card/sale__flat__1420295538"
+    },
+    {
         "title": "Дом с участком 10 соток",
         "image": "./img/product6.webp",
         "link": "https://bryansk.domclick.ru/card/sale__house__343101687"
+    },
+    {
+        "title": "Двухкомнатная квартира с индивидуальным отоплением",
+        "image": "./img/product9.webp",
+        "link": "https://bryansk.domclick.ru/card/sale__flat__1756696755"
     }
 ]
